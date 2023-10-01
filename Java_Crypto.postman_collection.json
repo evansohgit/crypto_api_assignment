@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "b1398ee9-6d5f-4bf4-908f-bbbbb10f4866",
+		"name": "Java_Crypto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5450099"
+	},
+	"item": [
+		{
+			"name": "Print db",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/test",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Onboard App",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "admin",
+						"type": "text"
+					},
+					{
+						"key": "api-token",
+						"value": "admin",
+						"type": "text"
+					},
+					{
+						"key": "api-token",
+						"value": "test",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "api-key",
+						"value": "test",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "app-name",
+							"value": "ggg",
+							"type": "text"
+						},
+						{
+							"key": "secret-key-name",
+							"value": "secret_name1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/createSecretKey",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"createSecretKey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Secret Key",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "admin",
+						"type": "text"
+					},
+					{
+						"key": "api-token",
+						"value": "admin",
+						"type": "text"
+					},
+					{
+						"key": "api-token",
+						"value": "test",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "api-key",
+						"value": "test",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "app-name",
+							"value": "ggg",
+							"type": "text"
+						},
+						{
+							"key": "secret-key-name",
+							"value": "secret_name1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/createSecretKey",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"createSecretKey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Encrypt",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "admin",
+						"type": "text"
+					},
+					{
+						"key": "api-token",
+						"value": "admin",
+						"type": "text"
+					},
+					{
+						"key": "api-token",
+						"value": "test",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "api-key",
+						"value": "test",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "app-name",
+							"value": "ggg",
+							"type": "text"
+						},
+						{
+							"key": "secret-key-name",
+							"value": "secret_name1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/encrypt",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"encrypt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decrypt",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "admin",
+						"type": "text"
+					},
+					{
+						"key": "api-token",
+						"value": "admin",
+						"type": "text"
+					},
+					{
+						"key": "api-token",
+						"value": "test",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "api-key",
+						"value": "test",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "app-name",
+							"value": "admin_app",
+							"type": "text"
+						},
+						{
+							"key": "secret-key-name",
+							"value": "admin_secret_1",
+							"type": "text"
+						},
+						{
+							"key": "data",
+							"value": "gAAAAABlFEDJfBlHL0QWlD98LA3LvK4D5YovHPYtrXx8IRT13alPCpVZvobRaARIB1-V8sS-TxBo1Mg3cEzmWtV67uySo5qRQw==",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/decrypt",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"decrypt"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
