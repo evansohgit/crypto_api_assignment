@@ -176,6 +176,11 @@
 							"key": "secret-key-name",
 							"value": "secret_name1",
 							"type": "text"
+						},
+						{
+							"key": "data",
+							"value": "test",
+							"type": "text"
 						}
 					]
 				},
