@@ -10,13 +10,24 @@
 			"name": "Print db",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "api-token",
+						"value": "admin",
+						"type": "text"
+					},
+					{
+						"key": "api-key",
+						"value": "admin",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "localhost:5000/test",
+					"raw": "localhost:8080/test",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "8080",
 					"path": [
 						"test"
 					]
@@ -68,13 +79,13 @@
 					]
 				},
 				"url": {
-					"raw": "localhost:5000/createSecretKey",
+					"raw": "localhost:8080/onboardApp",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "8080",
 					"path": [
-						"createSecretKey"
+						"onboardApp"
 					]
 				}
 			},
@@ -113,7 +124,7 @@
 					"formdata": [
 						{
 							"key": "app-name",
-							"value": "ggg",
+							"value": "admin_app",
 							"type": "text"
 						},
 						{
@@ -124,11 +135,11 @@
 					]
 				},
 				"url": {
-					"raw": "localhost:5000/createSecretKey",
+					"raw": "localhost:8080/createSecretKey",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "8080",
 					"path": [
 						"createSecretKey"
 					]
@@ -169,12 +180,17 @@
 					"formdata": [
 						{
 							"key": "app-name",
-							"value": "ggg",
+							"value": "admin_app",
 							"type": "text"
 						},
 						{
 							"key": "secret-key-name",
-							"value": "secret_name1",
+							"value": "admin_secret_1",
+							"type": "text"
+						},
+						{
+							"key": "data",
+							"value": "Hello World",
 							"type": "text"
 						}
 					]
@@ -235,17 +251,17 @@
 						},
 						{
 							"key": "data",
-							"value": "gAAAAABlFEDJfBlHL0QWlD98LA3LvK4D5YovHPYtrXx8IRT13alPCpVZvobRaARIB1-V8sS-TxBo1Mg3cEzmWtV67uySo5qRQw==",
+							"value": "/iaTXYeT/dplifi+cTnDfw==",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "localhost:5000/decrypt",
+					"raw": "localhost:8080/decrypt",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "8080",
 					"path": [
 						"decrypt"
 					]
