@@ -44,8 +44,9 @@ public class ValidateAppKeyFilter extends OncePerRequestFilter {
 
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) {
-        // Do not run filter for /onboardApp
-        return request.getServletPath().matches("/onboardApp");
+        // Do not run filter for /onboardApp or /test
+        // return request.getServletPath().matches("/onboardApp");
+        return request.getServletPath().matches("/onboardApp") || request.getServletPath().matches("/test");
         
     }
     
